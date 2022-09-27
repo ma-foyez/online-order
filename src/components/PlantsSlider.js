@@ -3,8 +3,8 @@ import { Image, ScrollView, View } from 'react-native';
 import Text from '../components/master/Text';
 
 const image = [
-    "https://cdn.pixabay.com/photo/2014/04/07/16/51/leaves-318743_960_720.jpg",
     "https://cdn.pixabay.com/photo/2022/08/27/18/12/hop-vines-7415073_960_720.jpg",
+    "https://cdn.pixabay.com/photo/2014/04/07/16/51/leaves-318743_960_720.jpg",
     "https://cdn.pixabay.com/photo/2018/04/18/21/23/pine-3331657_960_720.jpg",
     "https://cdn.pixabay.com/photo/2018/10/20/23/23/spruce-3762001_960_720.jpg"
 ]

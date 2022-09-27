@@ -22,11 +22,11 @@ export const presets = {
     default: BASE,
     bold   : BOLD,
     h1: {
-        ...BOLD,
+        ...BASE_BOLD,
         fontSize: 32,
     },
     h2: {
-        ...BOLD,
+        ...BASE_BOLD,
         fontSize: 28,
     },
     h3: {
@@ -43,7 +43,8 @@ export const presets = {
     },
     small: {
         ...BASE,
-        fontSize: 10,
+        fontSize: 14,
+        lineHeight: 20
     },
 
 }
