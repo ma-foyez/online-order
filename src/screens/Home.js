@@ -5,11 +5,12 @@ import PlantsSlider from '../components/PlantsSlider';
 import { colors } from '../theme/colors';
 import { AntDesign } from '@expo/vector-icons';
 import { spacing } from './../theme/spacing';
-import { Feather } from '@expo/vector-icons'; 
+import { Feather } from '@expo/vector-icons';
+import Order from './Order';
 const WIDTH = Dimensions.get('window').width;
 const HEIGHT = Dimensions.get('window').height;
 
-const Home = () => {
+const Home = ({ navigation }) => {
 
     return (
         <SafeAreaView style={styles.container}>
@@ -36,9 +37,12 @@ const Home = () => {
                         </Pressable>
                         <Pressable
                             style={styles.addToCart}
+                            onPress={() => {
+                                navigation.navigate("Order", Order)
+                            }}
                         >
                             <Feather name="shopping-cart" size={24} color={colors.white} />
-                            <Text style={{color: colors.white, marginLeft: spacing[3]}}>ADD TO CART</Text>
+                            <Text style={{ color: colors.white, marginLeft: spacing[3] }}>ADD TO CART</Text>
                         </Pressable>
                     </View>
                 </View>
@@ -82,18 +86,18 @@ const styles = StyleSheet.create({
         borderTopRightRadius: 40
 
     },
-    buttonArea:{
+    buttonArea: {
         marginTop: spacing[7],
         flexDirection: 'row',
     },
-    addWishlist:{
+    addWishlist: {
         backgroundColor: colors.white,
         padding: spacing[5],
         borderWidth: 0.5,
         borderColor: colors.indigoLight,
         borderRadius: 10,
     },
-    addToCart:{
+    addToCart: {
         backgroundColor: colors.green,
         flexDirection: 'row',
         justifyContent: 'center',

@@ -23,42 +23,40 @@ const PlantsSlider = ({ styles }) => {
 
 
     return (
-        <ScrollView>
-            <View style={styles.sliderContainer}>
-                <ScrollView
-                    onScroll={({ nativeEvent }) => onchange(nativeEvent)}
-                    showsHorizontalScrollIndicator={true}
-                    pagingEnabled
-                    scrollEnabled
-                    horizontal
-                    automatic
-                    style={styles.sliderContainer}
-                >
-                    {
-                        image.map((img, index) => (
-                            <Image
-                                key={index + 1}
-                                source={{ uri: img }}
-                                resizeMode="stretch"
-                                style={styles.sliderContainer}
-                            />
-                        ))
-                    }
-                </ScrollView>
-                <View style={styles.scrollDot}>
-                    {
-                        image.map((img, index) => (
-                            <Text
-                                key={img}
-                                style={activeImg == index ? styles.dotActive : styles.dot}
-                            >
-                                &#x25cf;
-                            </Text>
-                        ))
-                    }
-                </View>
+        <View style={styles.sliderContainer}>
+            <ScrollView
+                onScroll={({ nativeEvent }) => onchange(nativeEvent)}
+                showsHorizontalScrollIndicator={true}
+                pagingEnabled
+                scrollEnabled
+                horizontal
+                automatic
+                style={styles.sliderContainer}
+            >
+                {
+                    image.map((img, index) => (
+                        <Image
+                            key={index + 1}
+                            source={{ uri: img }}
+                            resizeMode="stretch"
+                            style={styles.sliderContainer}
+                        />
+                    ))
+                }
+            </ScrollView>
+            <View style={styles.scrollDot}>
+                {
+                    image.map((img, index) => (
+                        <Text
+                            key={img}
+                            style={activeImg == index ? styles.dotActive : styles.dot}
+                        >
+                            &#x25cf;
+                        </Text>
+                    ))
+                }
             </View>
-        </ScrollView>
+        </View>
     );
 };
 
